@@ -145,6 +145,9 @@ bcmpm_wdog_cb(void *self, int period)
 
 	bcmpm_wdog_set(sc, period << 16);
 
+	printf("wdog callback\n");
+	bcmpm_wdog_reset();
+
 	return period;
 }
 
